@@ -1,0 +1,62 @@
+<% include ../public/header.html %>
+
+
+    <div class="container-fluid">
+      <div class="row">
+        
+        <% include ../public/left.html %>
+
+        <div class="col-md-10 col-sm-8 col-xs-12 right-content">
+          <div class="content-header">
+            <form action="/admin/product/search" class="form-inline" method="GET">
+              <div class="form-group">
+                <label for="exampleInputName2">商品名称：</label>
+                <input type="text" class="form-control" id="exampleInputName2" placeholder="请输入商品名称" name="name">
+                <input type="submit" value="搜索" class="btn btn-primary">
+              </div>
+            </form>
+          </div>
+          <div id="content">
+            <table class="table table-bordered text-center">
+              <thead>
+                <tr>
+                  <td>编号</td>
+                  <td>名称</td>
+                  <td>图片</td>
+                  <td>价格</td>
+                  <td>描述</td>
+                  <td>操作</td>
+                </tr>
+              </thead>
+              <tbody>
+                <% for (var i = 0; i < data.length; i ++) { %>
+                <tr>
+                  <td><%= cur_page*num - (num-1) + i %></td>
+                  <td><%= data[i].name %></td>
+                  <td id="img-box"><img src="/uploads/<%= data[i].pic %>" alt=""></td>
+                  <td><%= data[i].price %></td>
+                  <td><%= data[i].details %></td>
+                  <td>
+                    <a href="/admin/product/edit?id=<%= data[i].id %>" class="btn btn-primary">修改</a>
+                    <a href="/admin/product/delete?id=<%= data[i].id %>" class="btn btn-danger">删除</a>                    
+                  </td>
+                </tr>
+                <% } %>
+              </tbody>
+            </table>
+          </div>
+          
+          <div class="content-page">
+            <a href="/admin?page=<%= last_page %>">上一页</a>
+            <% for (var i = 0; i < page_count; i ++) { %>
+              <a href="/admin?page=<%= i+1 %>" class="pageNum"><%= i + 1  %></a>
+            <% } %>
+            <a href="/admin?page=<%= next_page %>">下一页</a>                        
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+</body>
+</html>

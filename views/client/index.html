@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>首页</title>
+
+  <link rel="stylesheet" href="css/index.css">
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/move.js"></script>
+  <script src="js/index.js"></script>
+</head>
+
+<body>
+
+  <div class="header">
+    <div class="headImg left">
+      <img src=" image/logo.png" alt="">
+    </div>
+    <ul class="headNav">
+      <li>Mate 20系列</li>
+      <li>荣耀V20</li>
+      <li>开门红</li>
+      <li>荣耀10</li>
+    </ul>
+    <div class="headlogin right">
+      你好,
+      <a href="/login" style="color: orange; font-size: 16px;">
+        <% if (userinfo) { %>
+          <%= userinfo %>
+        <% } else { %>
+          请登录
+        <% } %>
+      </a>
+      <a href="/client/loginOut" style="font-size: 16px" id="zhuxiao">【注销】</a>
+      <a class="iconfont" href="/client/cart">
+        &#xe620;
+        <span id="shopNum">
+          <% if (userinfo) { %>
+            <%= shopNum %>
+          <% } else { %>
+            0
+          <% } %>
+        </span>
+      </a>
+    </div>
+  </div>
+
+
+  <div class="banner">
+    <div class="sub-banner one active">
+      <img src=" image/1.png" alt="">
+    </div>
+    <div class="sub-banner two">
+      <img src=" image/2.png" alt="">
+    </div>
+    <div class="sub-banner three">
+      <img src=" image/3.jpg" alt="">
+    </div>
+    <div class="sub-banner four">
+      <img src=" image/4.png" alt="">
+    </div>
+    <span class="prev iconfont" id="prev">&#xe606;</span>
+    <span class="next iconfont" id="next">&#xe603;</span>
+
+    
+  </div>
+
+
+  <h2>热销单品</h2> 
+  <div class="productList">
+    <% for(var i = 0; i < data.length; i ++) { %>
+      <div class="product">
+        <div class="product-box">
+          <div class="product-img">
+            <img src="uploads/<%= data[i].pic %>" alt="">
+          </div>
+          <div class="product-name"><%= data[i].name %></div>
+          <div class="product-details"><%= data[i].details %></div>
+          <div class="product-price">¥<%= data[i].price %></div>
+        </div>
+        <div class="product-buy">
+          <a href="/client/addToCart?id=<%= data[i].id %>">加入购物车</a>
+        </div>
+      </div>
+    <% } %>
+  </div>
+  <div class="rightFixed">
+    <div class="fixedBox">
+    </div>
+  </div>
+  
+
+  <div class="footer">
+    <div class="footer-title"><img src="/image/foot.jpg" alt=""></div>
+    <div class="footer-txt">
+      <div class="footer-txt-left">
+        <ul>
+          <li class="title">购物相关</li>
+          <li>购物指南</li>
+          <li>配送方式</li>
+          <li>支付方式</li>
+          <li>常见问题</li>
+        </ul>
+        <ul>
+          <li class="title">保修与退换货</li>
+          <li>保修政策</li>
+          <li>退换货政策</li>
+          <li>退换货流程</li>
+          <li>保修状态查询</li>
+          <li>配件防伪查询</li>
+        </ul>
+        <ul>
+          <li class="title">购物相关</li>
+          <li>购物指南</li>
+          <li>配送方式</li>
+          <li>支付方式</li>
+          <li>常见问题</li>
+        </ul>
+        <ul>
+          <li class="title">保修与退换货</li>
+          <li>保修政策</li>
+          <li>退换货政策</li>
+          <li>退换货流程</li>
+          <li>保修状态查询</li>
+          <li>配件防伪查询</li>
+        </ul>
+        <ul>
+          <li class="title">购物相关</li>
+          <li>购物指南</li>
+          <li>配送方式</li>
+          <li>支付方式</li>
+          <li>常见问题</li>
+        </ul>
+        <ul>
+          <li class="title">保修与退换货</li>
+          <li>保修政策</li>
+          <li>退换货政策</li>
+          <li>退换货流程</li>
+          <li>保修状态查询</li>
+          <li>配件防伪查询</li>
+        </ul>
+      </div>
+      <div class="footer-txt-right">
+        <div class="footer-phone">400-088-6888</div>
+        <div class="footer-details">7x24小时客服热线（仅收市话费）</div>
+        <div class="footer-kefu">
+          <button>
+            <span class="iconfont">&#xe643;</span>
+            <span class="footer-btn-txt">在线客服</span>
+          </button>
+        </div>
+        <div class="footer-icon">
+          关注Vmall：
+          <span class="iconfont">&#xe715;</span>
+          <span class="iconfont">&#xe60a;</span>
+          <span class="iconfont">&#xe64d;</span>
+          <span class="iconfont">&#xe647;</span>
+        </div>        
+      </div>      
+    </div>
+  </div>
+
+</body>
+
+</html>

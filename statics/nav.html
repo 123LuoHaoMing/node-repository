@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <style>
+    #nav_wapper {
+      position: relative;
+    }
+    #nav_box {
+      width: 200px;
+      height: 304px;
+      background-color: #ff0;
+      padding: 0 25px;
+      box-sizing: border-box;
+      border-radius: 10px 0 0 10px;
+    }
+
+    .nav_title_box {
+      height: 76px;
+      padding: 16px 0;
+      position: relative;
+    }
+
+    .nav_title_box strong {
+      display: block;
+    }
+
+    .nav_title_box span {
+      font-size: 14px;
+    }
+
+    .nav_title_box .line {
+      position: absolute;
+      width: 150px;
+      height: 1px;
+      background-color: #ccc;
+      left: 0;
+      bottom: 0;
+    }
+
+    #nav_box,
+    #sub_nav {
+      float: left;
+    }
+
+    #sub_nav {
+      min-width: 460px;
+      height: 304px;
+      background-color: #eee;
+      padding: 15px 32px 7px 32px;
+      display: flex;
+      flex-flow: column wrap;
+    }
+
+    .nav_content {
+      width: 200px;
+      height: 84px;
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 10px;
+    }
+
+    .nav_content:hover {
+      background-color: #fff;
+    }
+
+    .nav_content:nth-child(3n) {
+      margin-bottom: none;
+    }
+
+    .nav_img img {
+      width: 42px;
+      height: 55px;
+    }
+
+    .nav_img,
+    .nav_txt {
+      float: left;
+    }
+
+    .nav_txt {
+      line-height: 55px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="nav_wapper">
+    <nav id="nav_box">
+      <div class="nav_title_box">
+        <strong>
+          <a href="#">手机</a>
+        </strong>
+        <span>
+          <a href="">荣耀</a>　
+          <a href="">HUEWEI P系列</a>
+        </span>
+        <div class="line"></div>
+      </div>
+      <div class="nav_title_box">
+        <strong>
+          <a href="#">手机</a>
+        </strong>
+        <span>
+          <a href="">荣耀</a>　
+          <a href="">HUEWEI P系列</a>
+          <div class="line"></div>
+        </span>
+      </div>
+      <div class="nav_title_box">
+        <strong>
+          <a href="#">手机</a>
+        </strong>
+        <span>
+          <a href="">荣耀</a>　
+          <a href="">HUEWEI P系列</a>
+          <div class="line"></div>
+        </span>
+      </div>
+      <div class="nav_title_box">
+        <strong>
+          <a href="#">手机</a>
+        </strong>
+        <span>
+          <a href="">荣耀</a>　
+          <a href="">HUEWEI P系列</a>
+        </span>
+      </div>
+    </nav>
+    <ul class="sub_nav_box">
+      <li id="sub_nav">
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.1.png" alt="">
+          </div>
+          <div class="nav_txt">荣耀</div>
+        </div>
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.2.png" alt="">
+          </div>
+          <div class="nav_txt">HUEWEI 系列</div>
+        </div>
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.1.png" alt="">
+          </div>
+          <div class="nav_txt">荣耀</div>
+        </div>
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.1.png" alt="">
+          </div>
+          <div class="nav_txt">荣耀</div>
+        </div>
+      </li>
+      <li id="sub_nav">
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.1.png" alt="">
+          </div>
+          <div class="nav_txt">荣耀</div>
+        </div>
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.2.png" alt="">
+          </div>
+          <div class="nav_txt">HUEWEI 系列</div>
+        </div>
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.1.png" alt="">
+          </div>
+          <div class="nav_txt">荣耀</div>
+        </div>
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.1.png" alt="">
+          </div>
+          <div class="nav_txt">荣耀</div>
+        </div>
+      </li>
+      <li id="sub_nav">
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.1.png" alt="">
+          </div>
+          <div class="nav_txt">荣耀</div>
+        </div>
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.2.png" alt="">
+          </div>
+          <div class="nav_txt">HUEWEI 系列</div>
+        </div>
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.1.png" alt="">
+          </div>
+          <div class="nav_txt">荣耀</div>
+        </div>
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.1.png" alt="">
+          </div>
+          <div class="nav_txt">荣耀</div>
+        </div>
+      </li>
+      <li id="sub_nav">
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.1.png" alt="">
+          </div>
+          <div class="nav_txt">荣耀</div>
+        </div>
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.2.png" alt="">
+          </div>
+          <div class="nav_txt">HUEWEI 系列</div>
+        </div>
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.1.png" alt="">
+          </div>
+          <div class="nav_txt">荣耀</div>
+        </div>
+        <div class="nav_content">
+          <div class="nav_img">
+            <img src="image/1.1.png" alt="">
+          </div>
+          <div class="nav_txt">荣耀</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</body>
+</html>

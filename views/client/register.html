@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>login</title>
+  <link rel="stylesheet" href="/css/register.css">
+  <script src="/js/jquery-1.7.2.min.js"></script>
+  <script src="/js/register.js"></script>  
+
+</head>
+<body>
+  <div id="wrap">
+    <div class="header">
+      用户注册
+    </div>
+    <form action="/client/doRegister" method="POST" class="userForm">
+      <p>　用户名：<input type="text" name="username"><span ></span></p>
+      <p>　密　码：<input type="password" name="password"><span></span></p>
+      <!-- <p>确认密码：<input type="password" name="rePassword"><span></span></p>       -->
+      <div class="hasUsername">
+        已有账号，请<a href="/login">登录</a>
+      </div>
+      <input type="submit" value="注册">
+    </form>
+  </div>
+</body>
+</html>

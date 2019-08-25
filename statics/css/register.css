@@ -1,0 +1,59 @@
+#wrap {
+  width: 500px;
+  height: 280px;
+  border: 1px solid #0969c4;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -70%);
+  background: #12518e;
+  color: #eee;
+}
+a {
+  text-decoration: none;
+  color: orange;
+}
+.header {
+  width: 100%;
+  font-size: 18px;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  background-color: #2489e9;
+  border-radius: 15px 15px 0 0;
+}
+
+.userForm {
+  line-height: 40px;
+  /* text-align: center; */
+  margin-top: 40px;
+  margin-left: 55px; 
+}
+.userForm p span {
+  color: greenyellow;
+}
+.userForm input{
+  /* outline: none; */
+  font-size: 20px;
+  border: 1px solid #104475;
+}
+.userForm input[type="submit"] {
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  background: #2489e9;
+  font-size: 14px;
+  color: #fff;
+  position: absolute;
+  margin-top: 10px; 
+  right: 50px;
+  cursor: pointer;
+}
+
+.hasUsername {
+  line-height: 50px;
+  float: left;
+  margin-left: -10px;
+  font-size: 12px;
+}

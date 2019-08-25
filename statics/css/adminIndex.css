@@ -1,0 +1,114 @@
+*{padding: 0; margin: 0}
+
+input {
+  box-sizing: border-box;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+#wrapper {
+  box-sizing: border-box;
+  padding: 0 10px; 
+}
+
+.header {
+  padding: 10px 20px;
+}
+
+.h2 {
+  display: inline-block;
+  padding: 10px 50px;
+}
+
+.h-orange {
+  color: #fff;
+}
+.h-orange:hover {
+  color: orange;
+  cursor: pointer;
+}
+
+.f-right {
+  float: right;
+}
+.m-right {
+  margin-right: 20px;
+}
+
+.left-nav ul {
+  position: relative;
+}
+
+.left-nav ul li {
+  list-style: none;
+  cursor: pointer;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 18px;
+  border-bottom: 1px solid #ccc;
+}
+.left-nav ul li:last-of-type {
+  border-bottom: none;
+}
+
+#lLine, #rLine{
+  width: 1px;
+  background: #ccc;
+  position: absolute;
+}
+
+#lLine {
+  left: 0;
+  top: 0;
+}
+
+#rLine {
+  right: 0;
+  top: 0;
+}
+.col-md-10 {
+  /* padding: 0; */
+
+}
+.content-header {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding-left:50px; 
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+#img-box {
+  
+}
+#img-box img {
+  width: 100px;
+  height: 80px;
+}
+
+tbody td {
+  line-height: 70px !important; 
+}
+.content-page {
+  float: right;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.content-page span {
+  padding: 5px;
+  /* background-color: #ccc; */
+  /* color: blue; */
+}
+.content-page a {
+  margin: 0 2px;
+  padding: 5px;
+}
+.content-page .cur-page {
+  background-color: orange;
+  color: #fff;
+}

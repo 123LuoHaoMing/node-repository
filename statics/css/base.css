@@ -1,0 +1,50 @@
+/* reset */
+* {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+a {
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: #888;
+}
+input {
+  -webkit-appearance: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+div, p, table, th, tr, td, thead, tbody, ul, li, h1,h2,h3,h4,h5,h6,input,span,b {
+  box-sizing: border-box;
+}
+
+.corange {
+  color: orange;
+}
+.cyellow {
+  color: yellow;
+}
+.cskyblue {
+  color: skyblue;
+}
+.cgreen {
+  color: greenyellow;
+}
+
+.clearBox::after {
+  content: "";
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  clear: both;
+}
+.fleft {
+  float: left;
+}
+.fright {
+  float: right;
+}

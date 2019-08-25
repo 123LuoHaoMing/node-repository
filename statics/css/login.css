@@ -1,0 +1,74 @@
+#wrap {
+  width: 400px;
+  height: 250px;
+  border: 1px solid #0969c4;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -70%);
+  background: #12518e;
+  color: #eee;
+}
+a {
+  text-decoration: none;
+  color: orange;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px #0969c4 solid;
+}
+.header div {
+  flex: 1;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.header div:first-of-type {
+  border-radius: 20px 0 0 0;
+}
+.header div:last-of-type {
+  border-radius: 0 20px 0 0;
+}
+.header .active {
+  background: #2489e9;
+  box-shadow: 0 0 2px 0px #666 inset;
+  color: #fff;
+  font-weight: bold;
+}
+
+.userForm, .adminForm {
+  line-height: 40px;
+  text-align: center;
+  margin-top: 20px;
+}
+.userForm input, .adminForm input {
+  /* outline: none; */
+  font-size: 20px;
+  border: 1px solid #104475;
+}
+.userForm input[type="submit"], .adminForm input[type="submit"] {
+  width: 70px;
+  height: 30px;
+  line-height: 30px;
+  background: #2489e9;
+  font-size: 14px;
+  color: #fff;
+  position: absolute;
+  margin-top: 10px; 
+  right: 50px;
+  cursor: pointer;
+}
+
+.noUsername {
+  line-height: 50px;
+  float: left;
+  margin-left: 50px;
+  font-size: 12px;
+}
+
+.adminForm {
+  display: none;
+}

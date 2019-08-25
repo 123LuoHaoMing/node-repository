@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>购物车</title>
+  <link rel="stylesheet" href="/css/01.css">
+  <script src="/js/01.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="headImg left">
+      <img src="/image/logo.png" alt="">
+    </div>
+    <ul class="headNav">
+      <li>Mate 20系列</li>
+      <li>荣耀V20</li>
+      <li>开门红</li>
+      <li>荣耀10</li>
+    </ul>
+    <div class="headlogin right">
+      <a href="/client" id="head-back">
+        <img src="/image/back.png" alt="">
+      </a>
+      你好，
+      <%= userinfo %>
+        <a href="/client/loginOut" style="font-size: 16px" id="zhuxiao">【注销】</a>
+        <span id="shopNum"></span>
+        </a>
+    </div>
+  </div>
+
+  <div class="cartBox">
+    <table id="cartTable">
+      <thead>
+        <tr>
+          <th>
+            <label>
+              <input class="check-all check" type="checkbox" />&nbsp;全选</label>
+          </th>
+          <th>商品</th>
+          <th>单价</th>
+          <th>数量</th>
+          <th>小计</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% for (var i = 0; i<data.length; i ++) { %>
+          <tr>
+            <td class="checkbox">
+              <input class="check-one check" type="checkbox" />
+            </td>
+            <td class="goods">
+              <img src="/uploads/<%= data[i].pic %>" alt="" />
+              <span>
+                <%= data[i].name %>
+              </span>
+            </td>
+            <td class="price">
+              <%= data[i].price %>
+            </td>
+            <td class="count">
+              <a href="/client/reduceCartNum?id=<%=data[i].id%>" class="reduce">-</a>
+              <input class="count-input" type="text" value="<%= data[i].count %>" size="2" />
+              <a href="/client/addCartNum?id=<%=data[i].id%>" class="add">+</a>
+            </td>
+            <td class="subtotal">
+              <%= data[i].price*data[i].count %>
+            </td>
+            <td class="operation">
+              <a href="/client/deleteCart?id=<%= data[i].id %>" class="delete">删除</a>
+            </td>
+          </tr>
+          <% } %>
+      </tbody>
+    </table>
+
+    <div class="foot" id="foot">
+      <label class="fl select-all">
+        <input type="checkbox" class="check-all check" />&nbsp;全选</label>
+      <div class="fr closing">
+        <a href="../check">结 算</a>
+      </div>
+      <div class="fr total">合计：￥
+        <span id="priceTotal">0.00</span>
+      </div>
+      <div class="fr selected" id="selected">已选商品
+        <span id="selectedTotal">0</span>件
+        <span class="arrow up">︽</span>
+        <span class="arrow down">︾</span>
+      </div>
+      <div class="selected-view">
+        <div id="selectedViewList" class="clearfix">
+          <!-- <div><img src="image/1.jpg"><span class="del">取消选择</span></div> -->
+        </div>
+        <span class="arrow">◆
+          <span>◆</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
