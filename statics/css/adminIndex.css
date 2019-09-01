@@ -112,3 +112,18 @@ tbody td {
   background-color: orange;
   color: #fff;
 }
+
+/* 添加和编辑商品的form */
+#form-main { 
+  width: 600px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+#form-main div {
+  margin: 10px 0;
+}
+#form-main input[type="submit"] {
+  margin-top: 20px;
+  padding: 5px 30px;
+}

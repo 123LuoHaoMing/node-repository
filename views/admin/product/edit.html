@@ -10,27 +10,27 @@
 
           <div id="content" style="margin-top: 20px;">
             <div class="h4" style="margin-bottom: 20px;">修改商品</div>
-            <form class="form-inline" method="POST" enctype="multipart/form-data" action="/admin/product/doEdit">
+            <form class="form-inline" method="POST" enctype="multipart/form-data" action="/admin/product/doEdit" id="form-main">
               <div class="form-group">
-                <label for="exampleInputName2">商品名称</label>
+                <label for="exampleInputName2">商品名称：</label>
                 <input type="text" class="form-control" id="exampleInputName2"
                 name="name" value="<%= data.name %>">
               </div>
               <br>
               <div class="form-group">
-                <label for="exampleInputEmail2">商品图片</label>
+                <label for="exampleInputEmail2">商品图片：</label>
                 <input type="file" class="form-control" id="exampleInputEmail2" name="pic">
                 <!-- <br> -->
                 <img src="/uploads/<%= data.pic %>" width="100" alt="">
               </div>
               <br>
               <div class="form-group">
-                <label for="exampleInputName0">商品价格</label>
+                <label for="exampleInputName0">商品价格：</label>
                 <input type="text" class="form-control" id="exampleInputName0" name="price" value="<%= data.price %>">
               </div>
               <br>
               <div class="form-group">
-                <label for="exampleInputName1">商品描述</label>
+                <label for="exampleInputName1">商品描述：</label>
                 <input type="text" class="form-control" id="exampleInputName1" name="details" value="<%= data.details %>">
               </div>
               <br>
